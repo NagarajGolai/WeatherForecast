@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
+}
+
+#bodyDiv {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: fixed;
+  filter: blur(5px);
+  z-index: -1;
+}
+#bodyIn {
+  background-color: rgba(0, 0, 0, 0.252);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+#imgContainer {
+  background-image: url("weather-graphics/mistPic.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width: 40vw;
+  min-width: 400px;
+  max-height: 60vh;
+  min-height: 400px;
+  margin-top: 50vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+  border-radius: 10px 10px 10px 10px;
+}
+#imgContainer:hover {
+  scale: 1.02;
+  box-shadow: 0px 0px 20px 2px rgb(0, 195, 255);
+  /* transform: translate(2%,2%); */
+}
+#container {
+  background-color: rgba(0, 0, 0, 0.359);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+@media (max-width: 470px) {
+  #imgContainer {
+    width: 95%;
+    min-width: 0px;
+    height: 50vh;
+    overflow: hidden;
+  }
+}
+#outerP {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.505);
+  width: 100%;
+  height: 60px;
+}
+#outerP span {
+  color: white;
+  font-size: 20px;
+  animation: beat 3s infinite alternate;
+}
+
+@keyframes beat {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+.fa-circle-xmark {
+  color: white;
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  z-index: 2;
+}
+.fa-circle-xmark:hover {
+  cursor: pointer;
+}
+
+#searchIcon {
+  color: white;
+  display: flex;
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  align-items: center;
+  animation: beat1 3s infinite alternate;
+}
+.fa-magnifying-glass:hover {
+  cursor: pointer;
+}
+.fa-magnifying-glass:hover #inputCity {
+  width: 100%;
+}
+@keyframes beat1 {
+  0%,
+  40%,
+  80% {
+    transform: scale(1.02);
+  }
+  20%,
+  60%, 100%{
+    transform: scale(1);
+  }
+}
+#inputCity {
+  width: 0px;
+  height: 30px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.562);
+}
+
+#daynightSpan {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: small;
+  color: white;
+}
+#spanHead {
+  color: white;
+  margin-top: 10px;
+  font-size: small;
+  display: none;
+}
+#citySpan {
+  width: auto;
+  height: auto;
+  color: white;
+  margin-top: -5px;
+  font-size: 30px;
+  font-weight: bold;
+}
+#timeSpan {
+  color: white;
+  font-size: xx-small;
+  background-color: transparent;
+}
+#displayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6%;
+}
+#displayContent span {
+  color: white;
+}
+#remSpans {
+  /* margin-top: 0px; */
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+#condSpanText {
+  font-size: 12px;
+}
+#condSpan {
+  /* margin-top: 1%; */
+  font-size: 40px;
+}
+#tempSpan {
+  margin-top: 10px;
+}
+#tempSpanText {
+  font-size: 10px;
+  margin-top: -5px;
+}
+#convButton {
+  font-size: 12px;
+  padding: 2px;
+  outline: none;
+  border: none;
+}
+#convButton:hover {
+  cursor: pointer;
+}
+.remDiv {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#windSpanText,
+#humSpanText {
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  #spanHead {
+    margin-top: 20px;
+  }
+  #condSpan {
+    font-size: 40px;
+    margin-top: 0vh;
+  }
+  #condSpanText {
+    margin-top: 0px;
+  }
+  #tempSpan {
+    margin-top: 2vh;
+  }
+  #convButton {
+    font-size: 15px;
+  }
+}

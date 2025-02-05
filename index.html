@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="bodyDiv"></div>
+      <p id="outerP"><span>Turn your location ON!</span><i class="fa-sharp-duotone fa-regular fa-circle-xmark" id="xIcon"></i></p>
+        <div id="bodyIn">
+          <div id="imgContainer">
+            <div id="container">
+              <span id="daynightSpan"></span>
+              <i id="searchIcon" class="fa-solid fa-magnifying-glass">
+                <input
+                  type="text"
+                  id="inputCity"
+                  placeholder="Enter City Name here"
+              /></i>
+              <span id="spanHead">Showing weather conditions for</span>
+              <span id="citySpan"></span>
+              <span id="timeSpan"></span>
+
+              <div id="displayContent">
+                <span id="condSpanText"></span>
+                <span id="condSpan"></span>
+                <span id="tempSpan"></span>
+                <span id="tempSpanText"></span>
+                <button id="convButton"></button>
+                <div id="remSpans">
+                  <div class="remDiv">
+                    <span id="humSpan"></span>
+                    <span id="humSpanText"></span>
+                  </div>
+                  <div class="remDiv">
+                    <span id="windSpan"></span>
+                    <span id="windSpanText"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
